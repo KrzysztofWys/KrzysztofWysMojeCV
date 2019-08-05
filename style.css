@@ -35,19 +35,15 @@ header section {
 	margin: 0 auto;
 }
 
-header img {
-
+#MyStrengths{
+	display: none;
 }
+
 
 h1 {
 	margin: 16px;
 	color: #cccccc;
 	text-transform: uppercase;
-}
-
-fotografia {
-	width: 207 px;
-	height: 274 px;
 }
 
 main {
