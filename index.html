@@ -1,87 +1,108 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>CV Krzysztof Wysokiński na GitHub</title>
-	<meta name="description"
-		content="Przygotuję oprogramowanie na indywidualne potrzeby w Pythonie junior programmer serwis HTML CSS">
-	<meta name="author" content="Krzysztof Wysokiński">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 
+    <meta charset="UTF-8">
+    <title>CV Krzysztof Wysokiński na GitHub</title>
+    <meta name="description"
+        content="Przygotuję oprogramowanie na indywidualne potrzeby w Pythonie junior programmer serwis HTML CSS">
+    <meta name="author" content="Krzysztof Wysokiński">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700i&display=swap&subset=latin-ext" rel="stylesheet">
 </head>
 
 <body>
-	<header>
-		<div id="fotografia">
-			<div class="zdjecie">
-				<img src="KWcv2.png" onMouseOver="this.src='zdjecie_naj.png'" onMouseOut="this.src='KWcv2.png'">
-			</div>
-		</div>
-		<h1>Krzysztof
-			<!-- Cezary-->Wysokiński</h1>
-		<section>
-			<p>My life is going on with electronic development. I have been working with computers for years, as I
-				started with devices such as ZX Spectrum with the CP/M, afterwards dBase system and HTML text editors.
-				Today, I am still impressed by the continuous development of computer technology and its presence
-				everywhere. And I want to use my knowledge and skills in this area, finally in developing machine
-				learning applications. To this, I get to know (still) the Python programming language. I also feel
-				comfortable in web design and in object-oriented programming.</p>
-			<p>Over the last 9 years I have been involved in the commercial development of platform for home automation
-				in an international company. That platform includes gateways, cloud architecture, APIs, mobile and
-				utility applications. I managed the platform administration on the Polish market. At the same time, I
-				dealt with programming of devices for automation control in commercial buildings. All the knowledge in
-				this field I gained in English.</p>
 
-			<button type="button" onclick="document.getElementById('MyStrengths').style.display='block'">My
-				Strongests Points - click to see!</button>
+    <header>
+        <div class="slideshow-container">
 
-			<div id="MyStrengths">
-				<p>My strong points are:<br>
-					– wide knowledge of programming<br>
-					– very good practical understanding of English<br>
-					– mathematical and analitical skills<br>
-					– information search skills<br>
-					– first experience with cloud architecture.</p>
-			</div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img1.png" style="width:100%">
+                <div class="text">Krzysztof Wysokiński</div>
+            </div>
 
-			<p>On the other side, I completed additional humanistic post-gradiuation studies - programm for trainers
-				& coaches a few years ago, as I believe that a good engineer should develop also soft skills.
-			</p>
-		</section>
-	</header>
-	<main>
-		<!--Experience
-				</article>
-			</section>-->
-		<!-- Skilss
-			<section>
-				<h3>Skills</h3>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img2.png" style="width:100%">
+                <div class="text">Krzysztof Wysokiński</div>
+            </div>
+        </div>
+        <br>
 
-				Very good mathematical and analitical skills. 
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
 
-			</section>
-			Education
-			<section>
-				<h3>...some title...</h3>
-	      <article>
-	        <div class='school'>
-	          <span>1983-1989</span> Warsaw Technical University
-	        </div>
-	        <div class="descrition">
-	          Master of Science Engineer in Electronics
-	        </div>
-	      </article>
-			</section>
-			<!-- Experience / Projects / Portfolio ...
+        <h1>Krzysztof
+            <!-- Cezary-->Wysokiński</h1>
+    </header>
 
-			...put more sections here ...-->
+    <main>
+        <p>My life is going on with electronic development. I have been working with computers for years, as I
+            started with devices such as ZX Spectrum with the CP/M, afterwards dBase system and HTML text editors.
+            Today, I am still impressed by the continuous development of computer technology and its presence
+            everywhere. And I want to use my knowledge and skills in this area, finally in developing machine
+            learning applications. To this, I get to know (still) the Python programming language. I also feel
+            comfortable in web design and in object-oriented programming.</p>
+        <p>Over the last 9 years I have been involved in the commercial development of platform for home automation
+            in an international company. That platform includes gateways, cloud architecture, APIs, mobile and
+            utility applications. I managed the platform administration on the Polish market. At the same time, I
+            dealt with programming of devices for automation control in commercial buildings. All the knowledge in
+            this field I gained in English.</p>
 
-	</main>
-	<footer>
-		<p>Created by @Krzysztof Wysokiński on GitHub / 2019 </p>
-	</footer>
+        <button type="button" onclick="document.getElementById('MyStrengths').style.display='block'">My
+            Strongests Points - click to see!</button>
+
+        <div id="MyStrengths">
+            <p>My strong points are:<br>
+                – wide knowledge of programming<br>
+                – very good practical understanding of English<br>
+                – mathematical and analitical skills<br>
+                – information search skills<br>
+                – first experience with cloud architecture.</p>
+        </div>
+
+        <p>On the other side, I completed additional humanistic post-gradiuation studies - programm for trainers
+            & coaches a few years ago. I strongly believe that a good engineer should develop soft skills as well.
+        </p>
+    </main>
+    <footer>
+        <p>Created by @Krzysztof Wysokiński on GitHub / 2019 </p>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
 </body>
 
 </html>
